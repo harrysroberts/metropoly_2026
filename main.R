@@ -15,8 +15,8 @@ gs4_auth()
 results <- read_sheet("https://docs.google.com/spreadsheets/d/1CXOzJLPv7tH9tiLc9Rb0oiaJCUdygjYVqCG-N2BeC-8/edit",
                  sheet = "Form Responses 1") %>%
   
-## Extract results
-#results <- read_csv("data/results.csv") %>%
+  # Set correct timezone
+  mutate(Timestamp = lubridate::force_tz(Timestamp, "Europe/London")) %>%
   
   # Remove nuisance characters
   mutate(across(where(is.character), ~ str_remove_all(.x, "['\u2018\u2019]"))) %>%
@@ -220,5 +220,121 @@ ggplot(
       angle = 45,
       hjust = 1
     )
+  )
+
+# Time series analysis
+
+# Build score history through the day
+score_history <- results %>%
+  
+  # Rename this if your timestamp column has a different name
+  rename(timestamp = Timestamp) %>%
+  
+  # Ensure timestamps are correctly ordered
+  
+  arrange(team, timestamp) %>%
+  group_by(team) %>%
+  
+  # Keep the first submission for each location
+  distinct(location, .keep_all = TRUE) %>%
+  
+  # Points contributed by each individual submission
+  mutate(
+    station_points = if_else(
+      type == "station",
+      coalesce(score, 0),
+      0
+    ),
+    
+    landmark_points = if_else(
+      type == "landmark" & photo_verified,
+      coalesce(score, 0),
+      0
+    ),
+    
+    train_points = if_else(
+      type == "bonus",
+      coalesce(score, 0),
+      0
+    ),
+    
+    # Cumulative scoring components
+    station_score = cumsum(station_points),
+    landmark_score = cumsum(landmark_points),
+    train_bonus = cumsum(train_points),
+    
+    total_stations = cumsum(type == "station"),
+    
+    visited_baghill = cumany(
+      location == "Pontefract Baghill (station)"
+    ),
+    
+    station_bonus = if_else(
+      total_stations >= 45 & visited_baghill,
+      2500,
+      0
+    ),
+    
+    visited_bus_only = cumany(
+      coalesce(bus_only, FALSE) & photo_verified
+    ),
+    
+    # Original scoring rule remains unchanged
+    bus_only_penalty = if_else(
+      visited_bus_only,
+      0,
+      -1000
+    ),
+    
+    total_score = station_score +
+      landmark_score +
+      train_bonus +
+      station_bonus +
+      bus_only_penalty
+  ) %>%
+  
+  ungroup()
+
+event_start <- min(score_history$timestamp, na.rm = TRUE)
+
+starting_scores <- score_history %>%
+  distinct(team) %>%
+  mutate(
+    timestamp = event_start,
+    total_score = -1000
+  )
+
+score_history_plot <- bind_rows(
+  starting_scores,
+  score_history %>% select(team, timestamp, total_score)
+) %>%
+  arrange(team, timestamp)
+
+ggplot(
+  score_history_plot,
+  aes(
+    x = timestamp,
+    y = total_score,
+    colour = team,
+    group = team
+  )
+) +
+  geom_step(
+    linewidth = 1,
+    direction = "hv"
+  ) +
+  scale_x_datetime(
+    date_labels = "%H:%M",
+    date_breaks = "1 hour"
+  ) +
+  labs(
+    x = "Time",
+    y = "Score",
+    colour = "Team",
+    title = "Team scores throughout the day"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1)
   )
 
