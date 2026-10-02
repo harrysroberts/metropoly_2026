@@ -1,0 +1,111 @@
+location,type,easting,northing,bus_only,score
+Apperley (station),station,419372,438462,FALSE,200
+Baildon (station),station,416301,439358,FALSE,200
+Batley (station),station,424981,423820,FALSE,200
+Ben Rhydering (station),station,413400,447801,FALSE,200
+Berry Brow (station),station,413752,413855,FALSE,400
+Bingley (station),station,410810,439176,FALSE,200
+Bradford Foster Square (station),station,416353,433491,FALSE,200
+Bradford Interchange (station),station,416625,432716,FALSE,200
+Bramley (station),station,423989,434401,FALSE,200
+Brighouse (station),station,414667,422437,FALSE,400
+Brockholes (station),station,415300,411200,FALSE,400
+Burley in Wharfedale (station),station,416301,445801,FALSE,200
+Burley Park (station),station,427895,435168,FALSE,200
+Castelford (station),station,442650,425490,FALSE,200
+Cottingley (station),station,427270,430266,FALSE,200
+Crossflatts (station),station,410327,440242,FALSE,200
+Cross Gates (station),station,436296,434447,FALSE,200
+Darton (station),station,431157,410260,FALSE,1000
+Deighton (station),station,416458,419137,FALSE,1000
+Denby Dale (station),station,422400,408500,FALSE,1000
+Dewsbury (station),station,424300,421800,FALSE,200
+East Garforth (station),station,441495,433064,FALSE,200
+Featherstone (station),station,442485,420484,FALSE,400
+Fitzwilliam (station),station,441401,415299,FALSE,200
+Frizinghall (station),station,415315,436036,FALSE,200
+Garforth (station),station,440800,433500,FALSE,200
+Glasshoughton (station),station,443500,423802,FALSE,200
+Guiseley (station),station,418827,442245,FALSE,200
+Halifax (station),station,409757,424947,FALSE,400
+Headingley (station),station,426796,435827,FALSE,200
+Hebden Bridge (station),station,399500,426800,FALSE,400
+Honley (station),station,414597,412432,FALSE,400
+Horsforth (station),station,424400,439101,FALSE,200
+Huddersfield (station),station,414300,416899,FALSE,200
+Ilkley (station),station,411834,447643,FALSE,200
+Keighley (station),station,406600,441300,FALSE,200
+Kirkstall (station),station,424646,436624,FALSE,200
+Knottingley (station),station,449000,423599,FALSE,400
+Leeds (station),station,429832,433217,FALSE,0
+Lockwood (station),station,413270,415383,FALSE,200
+Low Moor (station),station,416426,428225,FALSE,200
+Marsden (station),station,404716,411855,FALSE,1000
+Menston (station),station,417484,444053,FALSE,200
+Micklefield (station),station,444495,432708,FALSE,400
+Mirfield (station),station,420400,419500,FALSE,200
+Moorthorpe (station),station,446109,411149,FALSE,200
+Morley (station),station,427189,428325,FALSE,200
+Mytholmroyd (station),station,401300,425900,FALSE,400
+New Pudsey (station),station,421137,434311,FALSE,200
+Normanton (station),station,438158,422817,FALSE,200
+Outwood (station),station,432408,424431,FALSE,200
+Pontefract Baghill (station),station,446100,421900,FALSE,2000
+Pontefract Monkhill (station),station,446000,422699,FALSE,200
+Pontefract Tanshelf (station),station,445071,422166,FALSE,400
+Ravensthorpe (station),station,422839,419954,FALSE,200
+Saltaire (station),station,413864,438055,FALSE,200
+Sandal & Agbrigg (station),station,434418,418606,FALSE,200
+Shepley (station),station,419637,410282,FALSE,400
+Shipley (station),station,415000,437501,FALSE,200
+Slaithwaite (station),station,407994,414187,FALSE,400
+South Elmsall (station),station,447401,411200,FALSE,400
+Sowerby Bridge (station),station,406199,423500,FALSE,400
+Steeton & Silsden (station),station,403724,444877,FALSE,200
+Stocksmoor (station),station,418400,410899,FALSE,400
+Streethouse (station),station,439776,420133,FALSE,200
+Todmorden (station),station,393499,424137,FALSE,400
+Wakefield Kirkgate (station),station,433842,420354,FALSE,200
+Wakefield Westgate (station),station,432754,420753,FALSE,200
+Walsden (station),station,393180,422237,FALSE,1000
+Woodlesford (station),station,436800,429100,FALSE,200
+Bradford City Hall,landmark,416345,432922,FALSE,550
+Brighouse Bus Station,landmark,414592,422940,FALSE,950
+Bronte Parsonage Museum,landmark,402893,437211,TRUE,1100
+Canal Gardens,landmark,432639,438234,TRUE,510
+Castle Hill,landmark,415240,414067,TRUE,1450
+Cleckheaton Bus Station,landmark,419098,425112,TRUE,1150
+Cow and Calf Rocks,landmark,413077,446794,FALSE,1350
+Denby Dale Pie Hall,landmark,423132,408645,FALSE,1500
+Dewsbury Minster,landmark,424615,421531,FALSE,1200
+Emley Moor Transmitter,landmark,422398,413857,TRUE,3000
+Eureka National Childrens Museum,landmark,409664,424865,FALSE,800
+Greenhead Park Conservatory,landmark,413477,416920,FALSE,700
+Halifax Piece Hall,landmark,409526,425063,FALSE,800
+Hardcastle Craggs,landmark,398847,429153,FALSE,1650
+Hebden Bridge Visitor and Canal Centre,landmark,399097,427077,FALSE,850
+Heckmondwike Clock,landmark,421585,423457,TRUE,1200
+Hepworth Gallery,landmark,433721,420064,FALSE,640
+"Holmfirth, Sids Cafe",landmark,414271,408161,TRUE,1100
+Ilkley Pool and Lido,landmark,411899,448447,FALSE,1220
+Kirkstall Abbey,landmark,425987,436145,FALSE,440
+Leeds Bradford International Airport,landmark,422417,441130,TRUE,1110
+Leeds Town Hall,landmark,429764,433865,FALSE,10
+Marsden Tunnel End,landmark,403964,411889,FALSE,1450
+National Coal Mining Museum,landmark,425298,416441,TRUE,1400
+National Science and Media Museum,landmark,416152,432716,FALSE,570
+Oakwell Hall,landmark,421766,427155,TRUE,850
+Oakworth Station,landmark,403910,438340,FALSE,1110
+Otley Market,landmark,420300,445637,FALSE,850
+Saltaire Congregational (United Reform) Church,landmark,413864,438107,FALSE,850
+Temple Newsham,landmark,436064,432397,FALSE,750
+The Liquorice Bush,landmark,445635,421951,FALSE,900
+The Northern Sole Cafe,landmark,407979,413986,FALSE,1350
+The World Famous Mumtaz Restaurant,landmark,414870,432239,FALSE,740
+Wakefield Kirkgate,landmark,433842,420354,FALSE,290
+Xscape,landmark,443529,423945,FALSE,800
+West Bretton (Yorkshire Sculpture Park),landmark,428478,413129,TRUE,1400
+Bonus: London express train (one service),bonus,,,FALSE,400
+Bonus: London express train (two services),bonus,,,FALSE,400
+Bonus: London express train (three services),bonus,,,FALSE,800
+Bonus: London express train (four services),bonus,,,FALSE,1600
